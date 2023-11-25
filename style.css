@@ -1491,3 +1491,23 @@
         border: 2px solid #989898;
         background-color: transparent;
     }
+
+/*  Custom css styling  */
+    #search-btn{
+        background: none;
+        border-radius: 50px;
+        border: none;
+    }
+    img, select{
+        cursor: pointer;
+    }
+    .search-img{
+        background-color: white !important;
+    }
+    .back-border-2{
+        height: 25px;
+        width: 25px;
+        border-radius: 25;
+        margin-top: -116px !important;
+        clip-path: '' !important;
+    }

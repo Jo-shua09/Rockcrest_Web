@@ -71,6 +71,7 @@
             if (email.value && password.value)
             {
                 window.location.pathname = "index.html";
+                localStorage.setItem("email", email.value);
             } else
             {
                 alert("Please Input The Required Field");

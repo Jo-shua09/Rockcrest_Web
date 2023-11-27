@@ -63,9 +63,9 @@
                                         <a class="nav-link" href="about.html">about us</a>
                                     </li>
                                 </ul>
-                                <a href="login.html"><button>Log in</button></a>
+                                <a href="login.html" id="log"><button>Log in</button></a>
                                 <span>
-                                    <a href="create.html"><button>Sign up</button></a>
+                                    <a href="create.html" id="sig"><button>Sign up</button></a>
                                 </span>
                             </div>
                         </div>
@@ -205,7 +205,7 @@
                     <p>23, Adeite street ifako Gbagada</p>
                     <hr>
                     <div class="search-icons">
-                        <div class="icon-1">
+                        <div class="icon-1" style="color: black !important;">
                             <i class="fa fa-bed">
                                 <span>2</span>
                             </i>
@@ -464,18 +464,35 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript">
         let button = document.querySelector('#search-btn');
-        button.addEventListener("click", () => {
+        let log = document.querySelector('#log');
+        let sig = document.querySelector('#sig');
+        document.addEventListener('DOMContentLoaded', ()=>{
+            if (localStorage.getItem('email'))
+            {
+                log.style.display = "none";
+                sig.style.display = "none";
+            } else
+            {
+                log.style.display = "inline-block";
+                sig.style.display = "inline-block";
+            }
+        });
+        button.addEventListener("click", ()=>{
             let select = document.querySelector("#location");
-            if (!select.value) {
+            if (!select.value){
                 return alert("Please Input Your Required Search Data");
             }
-            if (select.value === "ketu") {
+            if (select.value === "ketu"){
                 window.location.pathname = "renting-open.html";
-            } else if (select.value === "Alimosho") {
+            } else if (select.value === "Alimosho")
+            {
                 window.location.pathname = "land-open.html";
-            } else {
+            } else{
                 window.location.pathname = "renting-open.html";
             }
+        });
+        window.addEventListener('blur', ()=>{
+            localStorage.clear();
         });
     </script>
 </body>

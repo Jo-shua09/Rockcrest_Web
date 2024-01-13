@@ -30,23 +30,47 @@
     <section class="home" id="home">
         <div class="Home">
             <div class="home-page-nav">
-                <nav class="navbar">
-                    <div class="logo"><a href="index.html">Rockcrest.</a></div>
-                    <ul class="navigators">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="buying.html">buying</a></li>
-                        <li><a href="selling.html">selling</a></li>
-                        <li><a href="renting.html">renting</a></li>
-                        <li><a href="contact.html">contact us</a></li>
-                        <li><a href="lands.html">lands</a></li>
-                        <li><a href="about.html">about us</a></li>
-                        <a href="login.html" id="loginButton"><button id="loginButton">Log in</button></a>
-                        <span>
-                            <a href="create.html" id="signButton"><button>Sign up</button></a>
-                        </span>
-                    </ul>
-                    <div class="toggle-btn">
-                        <i class="fas fa-bars"></i>
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <h1>Rockcrest.</h1>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navigators">
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="buying.html">buying</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="selling.html">selling</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="renting.html">renting</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">contact us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="lands.html">lands</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">about us</a>
+                                    </li>
+                                </ul>
+                                <a href="login.html" id="log"><button>Log in</button></a>
+                                <span>
+                                    <a href="create.html" id="sig"><button>Sign up</button></a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </nav>
                 <div class="dropdown_menu">
@@ -201,24 +225,27 @@
                     <p>23, Adeite street ifako Gbagada</p>
                     <hr>
                     <div class="search-icons">
-                        <div class="icon-1 stylee">
-                            <i class="fa fa-bed">
-                                <span>2</span>
-                            </i>
-                            <h5>bedroom</h5>
-                        </div>
-                        <div class="icon-1 style1">
-                            <i class="fa fa-bath">
-                                <span>4</span>
-                            </i>
-                            <h5>bathroom</h5>
-                        </div>
-                        <div class="icon-1 style2">
-                            <i class="fa fa-warehouse">
-                                <span>1</span>
-                            </i>
-                            <h5>garage</h5>
-                        </div>
+                        <<<<<<< HEAD <div class="icon-1 stylee">
+                            =======
+                            <div class="icon-1" style="color: black !important;">
+                                >>>>>>> 62d6061404efc165a0bc5e53111d0ad3f3b11527
+                                <i class="fa fa-bed">
+                                    <span>2</span>
+                                </i>
+                                <h5>bedroom</h5>
+                            </div>
+                            <div class="icon-1 style1">
+                                <i class="fa fa-bath">
+                                    <span>4</span>
+                                </i>
+                                <h5>bathroom</h5>
+                            </div>
+                            <div class="icon-1 style2">
+                                <i class="fa fa-warehouse">
+                                    <span>1</span>
+                                </i>
+                                <h5>garage</h5>
+                            </div>
                     </div>
                 </div>
                 <div class="back-border-2"></div>
@@ -465,6 +492,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
         crossorigin="anonymous"></script>
+    <<<<<<< HEAD=======<script type="text/javascript">
+        let button = document.querySelector('#search-btn');
+        let log = document.querySelector('#log');
+        let sig = document.querySelector('#sig');
+        document.addEventListener('DOMContentLoaded', ()=>{
+        if (localStorage.getItem('email'))
+        {
+        log.style.display = "none";
+        sig.style.display = "none";
+        } else
+        {
+        log.style.display = "inline-block";
+        sig.style.display = "inline-block";
+        }
+        });
+        button.addEventListener("click", ()=>{
+        let select = document.querySelector("#location");
+        if (!select.value){
+        return alert("Please Input Your Required Search Data");
+        }
+        if (select.value === "ketu"){
+        window.location.pathname = "renting-open.html";
+        } else if (select.value === "Alimosho")
+        {
+        window.location.pathname = "land-open.html";
+        } else{
+        window.location.pathname = "renting-open.html";
+        }
+        });
+        window.addEventListener('blur', ()=>{
+        localStorage.clear();
+        });
+        </script>
+        >>>>>>> 62d6061404efc165a0bc5e53111d0ad3f3b11527
 </body>
 
 </html>

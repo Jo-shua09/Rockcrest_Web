@@ -67,6 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
         crossorigin="anonymous"></script>
+<<<<<<< HEAD
     <script>
         const loginForm = document.getElementById('loginForm');
         const loginButton = document.getElementById('loginButton');
@@ -76,6 +77,22 @@
             event.preventDefault();
             window.location.href = "index.html"
             loginButton.remove();
+=======
+    <script type="text/javascript">
+        let btn = document.querySelector("#submit");
+        btn.addEventListener('click', (e)=>{
+            e.preventDefault();
+            let email = document.querySelector("#email");
+            let password = document.querySelector("#pass");
+            if (email.value && password.value)
+            {
+                window.location.pathname = "index.html";
+                localStorage.setItem("email", email.value);
+            } else
+            {
+                alert("Please Input The Required Field");
+            }
+>>>>>>> 62d6061404efc165a0bc5e53111d0ad3f3b11527
         });
     </script>
 </body>>

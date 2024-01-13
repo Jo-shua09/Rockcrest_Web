@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     padding-top: 200px;
 }
 
@@ -31,8 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 250px;
-    padding-bottom: 370px;
+    padding-top: 200px;
+    padding-bottom: 310px;
 }
 
 .create-1 {
